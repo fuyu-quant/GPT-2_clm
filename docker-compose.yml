@@ -1,0 +1,15 @@
+version: "3.9"
+
+services:
+  gpt-2_clm:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: 'GPT-2_clm'
+    restart: always
+    tty: true
+    working_dir: '/root/'
+    volumes:
+      - /Users/tanakatouma/vscode/GPT-2_clm/src/:/root/src/
+      - /Users/tanakatouma/Documents/Docker_volumes/GPT-2_clm/:/root/output/
+
